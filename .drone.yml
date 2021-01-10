@@ -1,0 +1,46 @@
+---
+kind: pipeline
+name: test-amd64
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: test
+  image: thegeeklab/alpine
+  commands:
+  - pwd
+  - echo "Test"
+
+---
+kind: pipeline
+name: test-arm
+
+platform:
+  os: linux
+  arch: arm
+
+steps:
+- name: test
+  image: thegeeklab/alpine
+  commands:
+  - pwd
+  - echo "Test"
+
+---
+kind: pipeline
+name: test-arm64
+
+platform:
+  os: linux
+  arch: arm64
+
+steps:
+- name: test
+  image: thegeeklab/alpine
+  commands:
+  - pwd
+  - echo "Test"
+
+...
