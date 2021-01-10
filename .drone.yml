@@ -8,6 +8,7 @@ platform:
 
 steps:
 - name: test
+  pull: always
   image: thegeeklab/alpine:latest
   commands:
   - pwd
@@ -23,6 +24,7 @@ platform:
 
 steps:
 - name: test
+  pull: always
   image: thegeeklab/alpine:latest
   commands:
   - pwd
@@ -38,6 +40,7 @@ platform:
 
 steps:
 - name: test
+  pull: always
   image: thegeeklab/alpine:latest
   commands:
   - pwd
