@@ -9,7 +9,7 @@ platform:
 steps:
 - name: test
   pull: always
-  image: thegeeklab/alpine:latest
+  image: thegeeklab/buildx-alpine:latest
   commands:
   - pwd
   - echo "Test"
@@ -25,7 +25,7 @@ platform:
 steps:
 - name: test
   pull: always
-  image: thegeeklab/alpine:latest
+  image: thegeeklab/buildx-alpine:latest
   commands:
   - pwd
   - echo "Test"
@@ -41,7 +41,7 @@ platform:
 steps:
 - name: test
   pull: always
-  image: thegeeklab/alpine:latest
+  image: thegeeklab/buildx-alpine:latest
   commands:
   - pwd
   - echo "Test"
