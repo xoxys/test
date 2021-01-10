@@ -8,7 +8,7 @@ platform:
 
 steps:
 - name: test
-  image: thegeeklab/alpine
+  image: thegeeklab/alpine:latest
   commands:
   - pwd
   - echo "Test"
@@ -23,7 +23,7 @@ platform:
 
 steps:
 - name: test
-  image: thegeeklab/alpine
+  image: thegeeklab/alpine:latest
   commands:
   - pwd
   - echo "Test"
@@ -38,7 +38,7 @@ platform:
 
 steps:
 - name: test
-  image: thegeeklab/alpine
+  image: thegeeklab/alpine:latest
   commands:
   - pwd
   - echo "Test"
