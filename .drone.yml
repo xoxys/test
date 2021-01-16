@@ -1,6 +1,6 @@
 ---
 kind: pipeline
-name: test-arm6
+name: test-arm
 
 platform:
   os: linux
