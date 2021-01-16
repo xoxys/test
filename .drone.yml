@@ -8,7 +8,7 @@ platform:
 
 steps:
 - name: dryrun
-  image: plugins/docker:19
+  image: thegeeklab/drone-docker-buildx
   settings:
     dockerfile: Dockerfile
     dry_run: true
