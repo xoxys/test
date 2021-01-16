@@ -12,6 +12,6 @@ steps:
   settings:
     dockerfile: Dockerfile
     dry_run: true
-    repo: $DRONE_REPO_NAME
+    repo: xoxys/${DRONE_REPO_NAME}
 
 ...
