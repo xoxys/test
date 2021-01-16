@@ -12,6 +12,6 @@ steps:
   settings:
     dockerfile: Dockerfile
     dry_run: true
-    repository: $DRONE_REPO_NAME
+    repo: $DRONE_REPO_NAME
 
 ...
