@@ -8,7 +8,7 @@ platform:
 
 steps:
 - name: dryrun
-  image: thegeeklab/drone-docker-buildx
+  image: thegeeklab/drone-docker
   privileged: true
   settings:
     dockerfile: Dockerfile
