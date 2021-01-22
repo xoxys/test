@@ -10,9 +10,9 @@ steps:
 - name: Date
   image: alpine
   command:
-  - echo $BUILD_DATE
+  - echo $$BUILD_DATE
   environment:
-    BUILD_DATE: $(date)
+    BUILD_DATE: $$(date)
 
 - name: dryrun
   image: thegeeklab/drone-docker
