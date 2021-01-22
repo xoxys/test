@@ -10,7 +10,7 @@ steps:
 - name: Date
   image: alpine
   command:
-  - echo $$BUILD_DATE
+  - echo "Test"
   environment:
     BUILD_DATE: $$(date)
 
