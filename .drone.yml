@@ -9,8 +9,8 @@ platform:
 steps:
 - name: Date
   image: alpine
-  command:
-  - echo "Test"
+  commands:
+  - echo $BUILD_DATE
   environment:
     BUILD_DATE: $$(date)
 
