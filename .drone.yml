@@ -7,13 +7,6 @@ platform:
   arch: amd64
 
 steps:
-- name: Date
-  image: alpine
-  commands:
-  - echo $BUILD_DATE
-  environment:
-    BUILD_DATE: $(date)
-
 - name: dryrun
   image: thegeeklab/wait-for
   commands:
