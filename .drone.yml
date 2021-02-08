@@ -4,7 +4,7 @@ name: test-arm
 
 platform:
   os: linux
-  arch: arm
+  arch: amd64
 
 steps:
 - name: Date
@@ -15,10 +15,9 @@ steps:
     BUILD_DATE: $(date)
 
 - name: dryrun
-  image: thegeeklab/drone-docker
-  settings:
-    dockerfile: Dockerfile
-    dry_run: true
-    repo: xoxys/${DRONE_REPO_NAME}
+  image: thegeeklab/wait-for
+  commands:
+  - pwd
+  - ls -la
 
 ...
