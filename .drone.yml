@@ -8,22 +8,36 @@ platform:
 
 steps:
 - name: test
-  image: xoxys/test-drone
+  image: python:3.9
   commands:
-  - pacman -Syu
+  - pip install cryptography
 
-#---
-#kind: pipeline
-#name: test-arm
-#
-#platform:
-#  os: linux
-#  arch: arm
-#
-#steps:
-#- name: test
-#  image: xoxys/test-drone
-#  commands:
-#  - pacman -Syu
-#
-#...
+---
+kind: pipeline
+name: test-arm
+
+platform:
+  os: linux
+  arch: arm
+
+steps:
+- name: test
+  image: python:3.9
+  commands:
+  - pip install cryptography
+
+---
+kind: pipeline
+name: test-arm64
+
+platform:
+  os: linux
+  arch: arm64
+
+steps:
+- name: test
+  image: python:3.9
+  commands:
+  - pip install cryptography
+
+...
