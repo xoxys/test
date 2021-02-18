@@ -1,19 +1,5 @@
 ---
 kind: pipeline
-name: test-amd64
-
-platform:
-  os: linux
-  arch: amd64
-
-steps:
-- name: test
-  image: python:3.9-alpine
-  commands:
-  - pip install cryptography
-
----
-kind: pipeline
 name: test-arm
 
 platform:
@@ -22,22 +8,11 @@ platform:
 
 steps:
 - name: test
-  image: python:3.9
+  image: python:3.9-alpine
   commands:
-  - pip install cryptography
-
----
-kind: pipeline
-name: test-arm64
-
-platform:
-  os: linux
-  arch: arm64
-
-steps:
-- name: test
-  image: python:3.9
-  commands:
+  - apk add -Uq --no-cache build-base libressl-dev libffi-dev musl-dev python3-dev git
+  - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  - rustc --version
   - pip install cryptography
 
 ...
