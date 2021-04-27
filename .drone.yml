@@ -8,11 +8,8 @@ platform:
 
 steps:
 - name: test
-  image: python:3.9-alpine
+  image: alpine
   commands:
-  - apk add -Uq --no-cache build-base libressl-dev libffi-dev musl-dev python3-dev git curl
-  - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-  - rustc --version
-  - pip install cryptography
+    - echo "works"
 
 ...

@@ -1,5 +1,3 @@
 # test
 
-git playground
-
-
+Git playground repo
