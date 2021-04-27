@@ -12,4 +12,9 @@ steps:
   commands:
     - echo "works"
 
+trigger:
+  ref:
+  - refs/heads/main
+  - refs/tags/**
+
 ...
