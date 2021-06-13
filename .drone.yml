@@ -12,6 +12,18 @@ steps:
   commands:
     - echo "works"
 
+- name: add comment
+  image: thegeeklab/drone-github-comment
+  settings:
+    api_key:
+      from_secret: github_token
+    key: pr-${DRONE_PULL_REQUEST}
+    message: "Hello"
+    update: true
+  when:
+    ref:
+    - refs/pull/**
+
 trigger:
   ref:
   - refs/heads/main
