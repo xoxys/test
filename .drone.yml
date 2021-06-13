@@ -28,9 +28,10 @@ trigger:
   ref:
   - refs/heads/master
   - refs/tags/**
+  - refs/pull/**
 
 ---
 kind: signature
-hmac: 0ee8aaecff27c6720349e3d1531bf5ebe7684529ab649e8f706c28f9ea0a0ef0
+hmac: ec04c41d071412bccec02efd1706b3d5a5a680520c69744c9780357ad4c6c806
 
 ...
