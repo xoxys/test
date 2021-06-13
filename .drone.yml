@@ -11,6 +11,7 @@ steps:
   image: alpine
   commands:
   - echo "works"
+  - echo "From **file**" > comment.md
 
 - name: add comment
   image: thegeeklab/drone-github-comment
@@ -18,7 +19,7 @@ steps:
     api_key:
       from_secret: github_token
     key: pr-${DRONE_PULL_REQUEST}
-    message: Hello
+    message: comment.md
     skip_missing: true
     update: true
   when:
@@ -33,6 +34,6 @@ trigger:
 
 ---
 kind: signature
-hmac: f5f23d368916be53eb3c5371b231de40375a7861f504e3b28bb689f9469553ca
+hmac: 9961418df0cce5dfdf4e97f0bb2b4cdb046114bff40be66179a32c88281421c3
 
 ...
