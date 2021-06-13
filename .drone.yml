@@ -19,6 +19,7 @@ steps:
       from_secret: github_token
     key: pr-${DRONE_PULL_REQUEST}
     message: Hello
+    skip_missing: true
     update: true
   when:
     ref:
@@ -32,6 +33,6 @@ trigger:
 
 ---
 kind: signature
-hmac: ec04c41d071412bccec02efd1706b3d5a5a680520c69744c9780357ad4c6c806
+hmac: f5f23d368916be53eb3c5371b231de40375a7861f504e3b28bb689f9469553ca
 
 ...
