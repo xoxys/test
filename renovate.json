@@ -15,9 +15,29 @@
   },
   "packageRules": [
     {
-      "groupName": "docker digests",
-      "matchDatasources": ["docker"],
-      "matchUpdateTypes": ["pin", "digest"]
+      "description": "Automerge docs theme updates",
+      "matchDatasources": ["github-releases"],
+      "matchPackagePatterns": ["^thegeeklab/hugo-(geekdoc|geekblog)"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
+      "description": "Automerge dev dependencies",
+      "groupName": "devDependencies (non-major)",
+      "matchDepTypes": ["devDependencies", "dev-dependencies"],
+      "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
+      "automerge": true
     }
-  ]
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["^Makefile$"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?\\n.*?_VERSION (:|\\?)= (?<currentValue>.*)\\s"
+      ]
+    }
+  ],
+  "droneci": {
+    "enabled": false
+  }
 }
