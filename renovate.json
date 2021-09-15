@@ -10,5 +10,8 @@
       "matchDatasources": ["docker"],
       "matchUpdateTypes": ["pin", "digest"]
     }
-  ]
+  ],
+  "droneci": {
+    "enabled": false
+  }
 }
