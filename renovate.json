@@ -1,4 +1,16 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>thegeeklab/renovate-presets"]
+  "extends": [
+    "config:base"
+  ],
+  "docker": {
+    "pinDigests": true
+  },
+  "packageRules": [
+    {
+      "groupName": "docker digests",
+      "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["pin", "digest"]
+    }
+  ]
 }
