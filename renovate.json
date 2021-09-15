@@ -22,11 +22,9 @@
       "automerge": true
     },
     {
-      "description": "Automerge dev dependencies",
-      "groupName": "devDependencies (non-major)",
-      "matchDepTypes": ["devDependencies", "dev-dependencies"],
-      "matchUpdateTypes": ["pin", "digest", "patch", "minor"],
-      "automerge": true
+      "groupName": "docker digests",
+      "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["pin", "digest"]
     }
   ],
   "regexManagers": [
