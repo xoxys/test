@@ -1,7 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:base",
+    ":dependencyDashboard",
+    ":semanticCommits",
+    ":semanticCommitScope(deps)",
+    "docker:enableMajor",
+    ":masterIssue",
+    "group:linters",
+    ":maintainLockFilesWeekly"
   ],
   "docker": {
     "pinDigests": true
