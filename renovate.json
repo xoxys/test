@@ -15,13 +15,6 @@
   },
   "packageRules": [
     {
-      "description": "Automerge docs theme updates",
-      "matchDatasources": ["github-releases"],
-      "matchPackagePatterns": ["^thegeeklab/hugo-(geekdoc|geekblog)"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "automerge": true
-    },
-    {
       "groupName": "docker digests",
       "matchDatasources": ["docker"],
       "matchUpdateTypes": ["pin", "digest"]
