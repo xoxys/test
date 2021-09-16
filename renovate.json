@@ -4,13 +4,6 @@
   "docker": {
     "pinDigests": true
   },
-  "packageRules": [
-    {
-      "groupName": "docker digests",
-      "matchDatasources": ["docker"],
-      "matchUpdateTypes": ["digest"]
-    }
-  ],
   "droneci": {
     "enabled": false
   }
