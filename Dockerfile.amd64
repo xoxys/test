@@ -1,4 +1,4 @@
-FROM amd64/alpine:3.13
+FROM amd64/alpine:3.13@sha256:85e16a753e459ea44a8aa1dfc1cb8b625f9c487b00ea686384a96923a3691f4e
 
 ARG BUILD_DATE
 
