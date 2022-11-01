@@ -21,8 +21,8 @@ steps:
         - linux/amd64
       repo: xoxys/${DRONE_REPO_NAME}
       cache_from:
-        - "type=registry\,ref=example"
-        - "type=foo\,ref=bar"
+        - "type=registry\\\\,ref=example"
+        - "type=foo\\\\,ref=bar"
 
 trigger:
   ref:
