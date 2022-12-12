@@ -1,7 +1,7 @@
 FROM arm32v7/alpine:3.16
 
 # renovate: depName=https://github.com/xoxys/test-drone depBranch=main
-ENV GIT_REF_VERSION="${GIT_REF_VERSION:-ecd414ca4c2bdc1a45fc8dd0c4dd31ad8713a039}"
+ENV GIT_REF_VERSION="${GIT_REF_VERSION:-50bd841b6ff4afca276eec5a11cc863e6f51d404}"
 
 ARG BUILD_DATE
 
