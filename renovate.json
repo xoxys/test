@@ -4,5 +4,20 @@
   "docker": {
     "pinDigests": true
   },
-  "ignorePaths": ["**/.drone.*"]
+  "ignorePaths": ["**/.drone.*"],
+  "regexManagers": [
+    {
+      "fileMatch": ["(^|/|\\.)Dockerfile$", "(^|/)Dockerfile[^/]*$"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?\\nENV .*?_VERSION=\"\\${.*:-(?<currentValue>.*)}\"\\s"
+      ]
+    },
+    {
+      "fileMatch": ["(^|/|\\.)Dockerfile$", "(^|/)Dockerfile[^/]*$"],
+      "matchStrings": [
+        "# renovate: depName=(?<depName>\\S+) depBranch=(?<currentValue>\\S+)\\nENV .*?_VERSION=\"\\${.*:-(?<currentDigest>.*)}\"\\s"
+      ],
+      "datasourceTemplate": "git-refs"
+    }
+  ]
 }
