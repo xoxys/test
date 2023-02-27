@@ -7,22 +7,14 @@ platform:
   arch: amd64
 
 steps:
-  - name: test
-    image: alpine
-    commands:
-      - echo "works"
-
   - name: dryrun
     image: thegeeklab/drone-docker-buildx:20
     settings:
-      dockerfile: Dockerfile.amd64
+      dockerfile: Dockerfile
       dry_run: true
       platforms:
         - linux/amd64
       repo: xoxys/${DRONE_REPO_NAME}
-      cache_from:
-        - "type=registry\\\\,ref=example"
-        - "type=foo\\\\,ref=bar"
 
 trigger:
   ref:
