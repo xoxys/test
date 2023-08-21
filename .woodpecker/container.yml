@@ -1,0 +1,13 @@
+steps:
+  dryrun:
+    image: quay.io/thegeeklab/wp-docker-buildx:23
+    settings:
+      dockerfile: Containerfile.multiarch
+      dry_run: true
+      platforms:
+        - linux/amd64
+        - linux/arm64
+        - linux/arm/v7
+        - linux/arm/v6
+      provenance: false
+      repo: thegeeklab/${CI_REPO_NAME}
