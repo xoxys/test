@@ -2,7 +2,7 @@ steps:
   dryrun:
     image: quay.io/thegeeklab/wp-docker-buildx:1
     settings:
-      dockerfile: Containerfile.multiarch
+      containerfile: Containerfile.multiarch
       dry_run: true
       platforms:
         - linux/amd64
