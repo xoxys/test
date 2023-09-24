@@ -20,5 +20,5 @@ steps:
       repo: thegeeklab/${CI_REPO_NAME}
     when:
       - event: cron
-        cron: foo
+        cron: Test
       - event: manual
