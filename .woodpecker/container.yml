@@ -1,3 +1,10 @@
+when:
+  event:
+    - cron
+    - manual
+  branch:
+    - master
+
 steps:
   dryrun:
     image: quay.io/thegeeklab/wp-docker-buildx:1
@@ -11,3 +18,6 @@ steps:
         - linux/arm/v6
       provenance: false
       repo: thegeeklab/${CI_REPO_NAME}
+    when:
+      - event: cron
+      - event: manual
