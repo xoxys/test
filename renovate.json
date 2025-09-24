@@ -1,9 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", ":disableRateLimiting"],
-  "docker": {
-    "pinDigests": true
-  },
+  "extends": ["config:recommended", ":disableRateLimiting"],
   "customManagers": [
     {
       "customType": "regex",
@@ -36,6 +33,10 @@
     }
   ],
   "packageRules": [
+    {
+      "matchCategories": ["docker"],
+      "pinDigests": true
+    },
     {
       "matchPackageNames": ["/^k8s.io/"],
       "allowedVersions": "<0.32.0",
