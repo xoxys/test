@@ -30,7 +30,7 @@
       "depNameTemplate": "github.com/container-storage-interface/spec",
       "versioningTemplate": "semver",
       "extractVersionTemplate": "^v?(?<version>.*)$",
-      "datasourceTemplate": "gomod"
+      "datasourceTemplate": "go"
     }
   ],
   "packageRules": [
