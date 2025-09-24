@@ -25,7 +25,7 @@
     },
     {
       "customType": "regex",
-      "managerFilePatterns": ["pkg/csi/blockstorage/driver.go"],
+      "fileMatch": ["pkg/csi/blockstorage/driver.go"],
       "matchStrings": ["specVersion\\s*=\\s*'(?<currentValue>.+?)'"],
       "depNameTemplate": "github.com/container-storage-interface/spec",
       "versioningTemplate": "semver",
