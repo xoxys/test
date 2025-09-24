@@ -10,8 +10,8 @@ import (
 	"github.com/go-viper/mapstructure/v2"
 	// github.com/google/uuid
 	"github.com/google/uuid"
-	// github.com/kubernetes-csi/csi-lib-utils
-	"github.comcom/kubernetes-csi/csi-lib-utils/protosanitizer"
+	// github.com/kubernetes-csi/csi-lib-utils (Corrected import path)
+	"github.com/kubernetes-csi/csi-lib-utils/protosanitizer"
 	// github.com/onsi/ginkgo/v2
 	"github.com/onsi/ginkgo/v2"
 	// github.com/onsi/gomega
@@ -67,13 +67,13 @@ func main() {
 	_ = csi.VolumeCapability{}
 	_ = mapstructure.Metadata{}
 	_ = uuid.New()
-	_ = protosanitizer.New()
+	_ = protosanitizer.StripSecrets("foo")
 	_ = ginkgo.GinkgoWriter
 	_ = gomega.Ω
 	_ = prometheus.NewGauge(prometheus.GaugeOpts{})
 	_ = cobra.Command{}
 	_ = pflag.ContinueOnError
-	_, _ = config.New()
+	_ = &config.Configuration{}
 	_, _ = iaas.NewAPIClient()
 	_, _ = loadbalancer.NewAPIClient()
 	_ = gomock.Any()
@@ -92,4 +92,6 @@ func main() {
 	klog.Info("Using klog")
 	var _ mount.Interface
 	_ = ptr.To(42)
+
+	fmt.Println("All dependencies successfully referenced.")
 }
