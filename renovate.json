@@ -1,9 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    ":disableRateLimiting"
-  ],
+  "extends": ["config:recommended", ":disableRateLimiting"],
   "customManagers": [
     {
       "customType": "regex",
@@ -28,12 +25,8 @@
     },
     {
       "customType": "regex",
-      "managerFilePatterns": [
-        "pkg/csi/blockstorage/driver.go"
-      ],
-      "matchStrings": [
-        "specVersion\\s*=\\s*'(?<currentValue>.+?)'"
-      ],
+      "managerFilePatterns": ["pkg/csi/blockstorage/driver.go"],
+      "matchStrings": ["specVersion\\s*=\\s*'(?<currentValue>.+?)'"],
       "depNameTemplate": "github.com/container-storage-interface/spec",
       "versioningTemplate": "semver",
       "datasourceTemplate": "gomod"
@@ -41,28 +34,18 @@
   ],
   "packageRules": [
     {
-      "matchCategories": [
-        "docker"
-      ],
+      "matchCategories": ["docker"],
       "pinDigests": true
     },
     {
-      "matchPackageNames": [
-        "/^k8s.io/"
-      ],
+      "matchPackageNames": ["/^k8s.io/"],
       "allowedVersions": "<0.32.0",
       "automerge": false
     },
     {
-      "matchManagers": [
-        "gomod"
-      ],
-      "matchDepTypes": [
-        "indirect"
-      ],
-      "matchPackageNames": [
-        "github.com/kubernetes-csi/csi-lib-utils"
-      ],
+      "matchManagers": ["gomod"],
+      "matchDepTypes": ["indirect"],
+      "matchPackageNames": ["github.com/kubernetes-csi/csi-lib-utils"],
       "enabled": false
     }
   ]
