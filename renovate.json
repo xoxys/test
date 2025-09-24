@@ -24,6 +24,12 @@
       "matchPackageNames": ["/^k8s.io/"],
       "allowedVersions": "<0.32.0",
       "automerge": false
+    },
+    {
+      "matchManagers": ["gomod"],
+      "matchDepTypes": ["indirect"],
+      "matchPackageNames": ["github.com/kubernetes-csi/csi-lib-utils"],
+      "enabled": false
     }
   ]
 }
