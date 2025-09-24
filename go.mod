@@ -2,7 +2,7 @@ module github.com/xoxys/test
 
 go 1.24.0
 
-toolchain go1.24.5
+toolchain go1.25.1
 
 require (
 	github.com/container-storage-interface/spec v1.11.0
