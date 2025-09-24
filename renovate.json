@@ -1,10 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
+  "extends": ["config:base", ":disableRateLimiting"],
   "docker": {
     "pinDigests": true
   },
-  "ignorePaths": ["**/.drone.*"],
   "regexManagers": [
     {
       "fileMatch": ["(^|/|\\.)Dockerfile$", "(^|/)Dockerfile[^/]*$"],
@@ -18,6 +17,13 @@
         "# renovate: depName=(?<depName>\\S+) depBranch=(?<currentValue>\\S+)\\nENV .*?_VERSION=\"\\${.*:-(?<currentDigest>.*)}\"\\s"
       ],
       "datasourceTemplate": "git-refs"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["/^k8s.io/"],
+      "allowedVersions": "<0.32.0",
+      "automerge": false
     }
   ]
 }
