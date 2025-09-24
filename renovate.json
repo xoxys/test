@@ -4,19 +4,34 @@
   "docker": {
     "pinDigests": true
   },
-  "regexManagers": [
+  "customManagers": [
     {
-      "fileMatch": ["(^|/|\\.)Dockerfile$", "(^|/)Dockerfile[^/]*$"],
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/(^|/|\\.)Dockerfile$/",
+        "/(^|/)Dockerfile[^/]*$/"
+      ],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?\\nENV .*?_VERSION=\"\\${.*:-(?<currentValue>.*)}\"\\s"
       ]
     },
     {
-      "fileMatch": ["(^|/|\\.)Dockerfile$", "(^|/)Dockerfile[^/]*$"],
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/(^|/|\\.)Dockerfile$/",
+        "/(^|/)Dockerfile[^/]*$/"
+      ],
       "matchStrings": [
         "# renovate: depName=(?<depName>\\S+) depBranch=(?<currentValue>\\S+)\\nENV .*?_VERSION=\"\\${.*:-(?<currentDigest>.*)}\"\\s"
       ],
       "datasourceTemplate": "git-refs"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["pkg/csi/blockstorage/driver.go"],
+      "matchStrings": ["specVersion\\s*=\\s*'(?<currentValue>.+?)'"],
+      "depName": "github.com/container-storage-interface/spec",
+      "versioning": "semver"
     }
   ],
   "packageRules": [
