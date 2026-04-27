@@ -1,6 +1,6 @@
 module github.com/xoxys/test
 
-go 1.24.6
+go 1.25
 
 toolchain go1.26.2
 
@@ -14,7 +14,7 @@ require (
 	github.com/prometheus/client_golang v1.23.2
 	github.com/spf13/cobra v1.10.2
 	github.com/spf13/pflag v1.0.10
-	github.com/stackitcloud/stackit-sdk-go/core v0.17.3
+	github.com/stackitcloud/stackit-sdk-go/core v0.26.0
 	github.com/stackitcloud/stackit-sdk-go/services/iaas v0.30.0
 	github.com/stackitcloud/stackit-sdk-go/services/loadbalancer v1.5.1
 	go.uber.org/mock v0.6.0
@@ -49,7 +49,7 @@ require (
 	github.com/go-task/slim-sprig/v3 v3.0.0 // indirect
 	github.com/godbus/dbus/v5 v5.1.0 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
-	github.com/golang-jwt/jwt/v5 v5.3.0 // indirect
+	github.com/golang-jwt/jwt/v5 v5.3.1 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/google/gnostic-models v0.7.0 // indirect
 	github.com/google/go-cmp v0.7.0 // indirect
