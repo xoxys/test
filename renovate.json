@@ -35,6 +35,16 @@
   ],
   "packageRules": [
     {
+      "packageRules": [
+        {
+          "matchPackageNames": [
+            "/^github.com/stackitcloud/stackit-sdk-go/services/"
+          ],
+          "changelogUrl": "https://github.com/stackitcloud/stackit-sdk-go/blob/main/services/{{{ lookup (split packageName '/') 4 }}}/CHANGELOG.md"
+        }
+      ]
+    },
+    {
       "matchCategories": ["docker"],
       "pinDigests": true
     },
