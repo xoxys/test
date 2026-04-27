@@ -6,7 +6,7 @@ toolchain go1.26.2
 
 require (
 	github.com/container-storage-interface/spec v1.12.0
-	github.com/go-viper/mapstructure/v2 v2.4.0
+	github.com/go-viper/mapstructure/v2 v2.5.0
 	github.com/google/uuid v1.6.0
 	github.com/kubernetes-csi/csi-lib-utils v0.19.0
 	github.com/onsi/ginkgo/v2 v2.28.2
