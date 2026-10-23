@@ -1,6 +1,6 @@
 module github.com/xoxys/test
 
-go 1.25.0
+go 1.26
 
 toolchain go1.26.2
 
@@ -31,7 +31,7 @@ require (
 	k8s.io/component-base v0.34.1
 	k8s.io/klog/v2 v2.130.1
 	k8s.io/mount-utils v0.31.14
-	k8s.io/utils v0.0.0-20260319190234-28399d86e0b5
+	k8s.io/utils v0.0.0-20261023123148-ca04ba58ecab
 )
 
 require (
